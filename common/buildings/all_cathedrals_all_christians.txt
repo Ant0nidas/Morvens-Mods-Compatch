@@ -1,0 +1,465 @@
+﻿##CMH Hagia Sophia & All Cathedrals Enabled For All Christians (00_special_buildings)
+##########
+# Cologne Cathedral
+##########
+
+holy_site_cologne_cathedral_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.15
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_piety_gain_per_knight_add = 0.1
+		knight_effectiveness_mult = 0.2
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+	
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+##########
+# Canterbury Cathedral
+##########
+
+holy_site_canterbury_cathedral_01 = {
+	construction_time = very_slow_construction_time
+	
+	asset = {
+		type = pdxmesh
+		name = "ep2_building_special_canterbury_01_mesh"
+	}
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.05
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.1
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.1
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	next_building = holy_site_canterbury_cathedral_02
+	
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+	
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+holy_site_canterbury_cathedral_02 = {
+	construction_time = very_slow_construction_time
+	
+	asset = {
+		type = pdxmesh
+		name = "ep2_building_special_canterbury_02_mesh"
+	}
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.5
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 5
+	}
+	
+	next_building = holy_site_canterbury_cathedral_03
+	
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+	
+	type = special
+}
+
+holy_site_canterbury_cathedral_03 = {
+	construction_time = very_slow_construction_time
+	
+	asset = {
+		type = pdxmesh
+		name = "ep2_building_special_canterbury_03_mesh"
+	}
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger_all_christians #Modded
+				scope:holder = {
+					religion = religion:christianity_religion #Modded
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 1
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.25
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.3
+	}
+	
+	county_modifier = {
+		tax_mult = 0.3
+		development_growth_factor = 0.30
+		development_growth = 0.3
+		county_opinion_add = 5
+	}
+	
+	province_modifier = {
+		monthly_income = 6
+	}
+	
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+	
+	type = special
+}
+
+##########
+# Hagia Sophia
+##########
+
+hagia_sophia_01 = {
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_hagia_sophia_mesh"
+	}
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_hagia_sophia.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_building_trigger_all_christians #Modded
+			scope:holder = {
+				religion = religion:christianity_religion #Modded
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety_gain_per_knight_add = 0.1
+		intrigue_per_prestige_level = 2
+		learning = 2
+		knight_limit = 2
+		knight_effectiveness_mult = 0.2
+		monthly_dynasty_prestige_mult = 0.05
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.2
+	}
+	
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+	
+	next_building = hagia_sophia_02
+	
+	type = special
+
+	flag = travel_point_of_interest_religious
+}
+
+hagia_sophia_02 = {
+
+	asset = {
+		type = pdxmesh
+		name = "building_special_hagia_sophia_minarets_mesh"
+	}
+
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_hagia_sophia.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		scope:holder = {
+			OR = {
+				religion = religion:islam_religion
+				religion = religion:christianity_religion
+			}
+		}
+	}
+	
+	is_enabled = {
+		OR = {
+			custom_description = {
+				text = holy_site_muslim_or_holy_site_trigger
+				OR = {
+					scope:holder = {
+						religion = religion:islam_religion
+					}
+					custom_description = {
+						text = holy_site_building_trigger
+						barony = {
+							is_holy_site_of = scope:holder.faith
+						}
+					}
+				}
+			}
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger_all_christians #Modded
+					scope:holder = {
+						religion = religion:christianity_religion #Modded
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+	cost_piety = 1000
+
+	character_modifier = {
+		monthly_piety_gain_per_knight_add = 0.1
+		intrigue_per_prestige_level = 2
+		learning = 2
+		knight_limit = 2
+		knight_effectiveness_mult = 0.2
+		monthly_dynasty_prestige_mult = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+
+	flag = travel_point_of_interest_religious
+}

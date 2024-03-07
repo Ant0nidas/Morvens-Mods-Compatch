@@ -1,0 +1,38 @@
+﻿namespace = less_old_wives
+
+less_old_wives.1001 = {
+	scope = none
+	hidden = yes
+	immediate = {
+		every_independent_ruler = {
+			trigger_event = less_old_wives.1002
+			every_vassal_or_below = {
+				trigger_event = less_old_wives.1002
+			}
+		}
+	}
+}
+
+less_old_wives.1002 = {
+	type = character_event
+	hidden = yes
+	
+	trigger = {
+		#is_from_ruler_designer = no # Do not modify the family of somoene from the ruler designer
+		is_landed = yes
+		is_ruler = yes
+		primary_title = {
+			is_mercenary_company = no
+			is_holy_order = no
+		}
+		NOR = {
+			government_has_flag = government_is_republic
+			government_has_flag = government_is_theocracy 
+			this = character:7757 #Matilda Canossa, her bookmark start is about overcoming the issue of no heir
+		}
+	}
+
+	immediate = {
+		generate_girls_and_maidens = { CHARACTER = root }
+	}
+}

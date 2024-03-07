@@ -1,0 +1,12 @@
+﻿generate_maidens_game_rule = {
+	default = generate_no_maidens
+	
+	generate_no_maidens = {
+	}
+	
+	generate_only_non_dynasty_maidens = {
+	}
+
+	generate_dynasty_maidens = {
+	}
+}

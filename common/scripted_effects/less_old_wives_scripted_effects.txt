@@ -1,0 +1,248 @@
+﻿generate_girls_and_maidens = {
+	if = {
+		limit = {
+			has_game_rule = generate_only_non_dynasty_maidens
+		}
+		create_character = {
+			culture = $CHARACTER$.culture
+			faith = $CHARACTER$.faith
+			gender = female
+			age = {
+				value = { 16 19 }
+			}
+			dynasty = generate
+			employer = $CHARACTER$
+			random_traits = yes
+			save_temporary_scope_as = guardian_1
+		}	
+		create_character = {
+			culture = $CHARACTER$.culture
+			faith = $CHARACTER$.faith
+			gender = female
+			age = {
+				value = { 16 19 }
+			}
+			dynasty = generate
+			employer = $CHARACTER$
+			random_traits = yes
+			save_temporary_scope_as = guardian_2
+		}
+		create_character = {
+			culture = $CHARACTER$.culture
+			faith = $CHARACTER$.faith
+			gender = female
+			age = {
+				value = { 8 11 }
+			}
+			dynasty = generate
+			employer = $CHARACTER$
+			random_traits = yes
+			save_temporary_scope_as = warden_1
+		}
+		create_character = {
+			culture = $CHARACTER$.culture
+			faith = $CHARACTER$.faith
+			gender = female
+			age = {
+				value = { 12 15 }
+			}	
+			dynasty = generate
+			employer = $CHARACTER$
+			random_traits = yes
+			save_temporary_scope_as = warden_2
+		}
+		scope:warden_1 = {
+			set_relation_guardian = scope:guardian_1
+		}
+		scope:warden_2 = {
+			set_relation_guardian = scope:guardian_2
+		}
+	}
+	if = {
+		limit = {
+			has_game_rule = generate_dynasty_maidens
+		}
+		if = {
+			limit = {
+				$CHARACTER$.dynasty = {
+					OR = {
+						any_dynasty_member = {
+							is_female = yes
+							age < 30
+							count < 6 #nerfed from 10
+						}
+						any_dynasty_member = {
+							percent < 0.45
+							is_female = yes
+						}
+					}
+				}
+			}		
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 16 19 }
+				}
+				dynasty = $CHARACTER$.dynasty
+				dynasty_house = $CHARACTER$.house
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = guardian_1
+			}
+		}
+		else = {
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 16 19 }
+				}
+				dynasty = generate
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = guardian_1
+			}	
+		}
+		if = {
+			limit = {
+				$CHARACTER$.dynasty = {
+					OR = {
+						any_dynasty_member = {
+							is_female = yes
+							age < 30
+							count < 6 #nerfed from 10
+						}
+						any_dynasty_member = {
+							percent < 0.45
+							is_female = yes
+						}
+					}
+				}
+			}		
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 16 19 }
+				}
+				dynasty = $CHARACTER$.dynasty
+				dynasty_house = $CHARACTER$.house
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = guardian_2
+			}
+		}
+		else = {
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 16 19 }
+				}
+				dynasty = generate
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = guardian_2
+			}	
+		}
+		if = {
+			limit = {
+				$CHARACTER$.dynasty = {
+					OR = {
+						any_dynasty_member = {
+							is_female = yes
+							age < 30
+							count < 6 #nerfed from 10
+						}
+						any_dynasty_member = {
+							percent < 0.45
+							is_female = yes
+						}
+					}
+				}
+			}		
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 8 11 }
+				}
+				dynasty = $CHARACTER$.dynasty
+				dynasty_house = $CHARACTER$.house
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = warden_1
+			}
+		}
+		else = {
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 8 11 }
+				}
+				dynasty = generate
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = warden_1
+			}	
+		}
+		if = {
+			limit = {
+				$CHARACTER$.dynasty = {
+					OR = {
+						any_dynasty_member = {
+							is_female = yes
+							age < 30
+							count < 6 #nerfed from 10
+						}
+						any_dynasty_member = {
+							percent < 0.45
+							is_female = yes
+						}
+					}
+				}
+			}		
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 12 15 }
+				}
+				dynasty = $CHARACTER$.dynasty
+				dynasty_house = $CHARACTER$.house
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = warden_2
+			}
+		}
+		else = {
+			create_character = {
+				culture = $CHARACTER$.culture
+				faith = $CHARACTER$.faith
+				gender = female
+				age = {
+					value = { 12 15 }
+				}
+				dynasty = generate
+				employer = $CHARACTER$
+				random_traits = yes
+				save_temporary_scope_as = warden_2
+			}	
+		}
+		scope:warden_1 = {
+			set_relation_guardian = scope:guardian_1
+		}
+		scope:warden_2 = {
+			set_relation_guardian = scope:guardian_2
+		}
+	}
+}
