@@ -1,7 +1,7 @@
-version="1.3.2"
+version="1.4"
 tags={
 	"Fixes"
 }
-name="Morven's Mods Compatch"
-supported_version="1.11.*"
+name="Morven's Mods 1.12 Compatch"
+supported_version="1.12.*"
 remote_file_id="3001489429"
