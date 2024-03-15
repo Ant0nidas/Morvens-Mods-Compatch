@@ -4,8 +4,8 @@
 hire_physician_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_physician.dds"
 	
-	#sort_order = 81
-	major = yes
+	sort_order = 81
+	#major = yes
 
 	desc = hire_physician_decision_desc
 	selection_tooltip = hire_physician_decision_tooltip
