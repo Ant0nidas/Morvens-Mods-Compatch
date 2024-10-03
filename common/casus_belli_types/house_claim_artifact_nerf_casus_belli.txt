@@ -9,6 +9,9 @@ artifact_war = {
 
 	allowed_for_character = {
 		has_any_artifact_claim = yes
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+		}
 	}
 	allowed_against_character = {
 		scope:attacker = {
@@ -179,6 +182,9 @@ artifact_war = {
 	}
 
 	on_defeat = {
+		# Legitimacy
+		add_legitimacy_attacker_defeat_effect = yes
+		
 		#EP2 accolade glory gain for winning against higher ranked enemy
 		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
 
